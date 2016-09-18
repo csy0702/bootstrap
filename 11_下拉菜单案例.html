@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  
+  <style>
+  	#tip{
+  		margin-left: 300px;
+  	}
+  	
+  	#tip .dropdown-menu{
+  		-webkit-animation: move 1s linear ;
+  		-moz-animation: move 1s linear ;
+  	}
+  	
+  	@-webkit-keyframes move{
+  		0%{
+  			opacity: 0;
+  			}
+  		100%{
+  			opacity: 1;
+  			}
+  	}
+  	@-moz-keyframes move{
+  		0%{
+  			opacity: 0;
+  			-moz-transform: translateY(-20);
+  		}
+  		100%{
+  			opacity: 1;
+  			-moz-transform: translateY(0);
+  		}
+  	}
+  </style>
+  <body>
+  	<div class="dropdown " id="tip">
+  		<button  id="bt" class="btn btn-default dropdown-toggle" type="button" data-toggle = "dropdown">按钮
+  			<span class="caret"></span>
+  		</button>
+  		<ul class="dropdown-menu" >
+  			<li class="dropdown-header"><a>今天</a></li>
+  			<li><a><span class="glyphicon glyphicon-star"></span>昨天</a></li>
+  			<li><a><span class="glyphicon glyphicon-star"></span>明天</a></li>
+  			<li class="divider"></li>
+  			<li class="dropdown-header"><a>今天</a></li>
+  			<li><a><span class="glyphicon glyphicon-star"></span>昨天</a></li>
+  			<li><a><span class="glyphicon glyphicon-star"></span>明天</a></li>
+  		</ul>
+  	</div>
+    <script src="bootstrap/jquery-3.1.0.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script>
+  	$(function(){
+  		//判断平台
+  		if(window.navigator.userAgent.toLocaleLowerCase().indexOf("moblie")==-1){
+  			var timer=null;
+  			//pc端
+  			$("#bt").hover(function(){
+  				clearInterval(timer);
+  				$(".dropdown").addClass("open");
+	  		},function(){
+	  			timer=setInterval(function(){
+	  				$(".dropdown").removeClass("open")
+	  			},100);
+	  			
+	  		})
+  			//菜单移入的时候，清除延时器
+  			$(".dropdown-menu").hover(function(){
+  				clearInterval(timer);
+  				
+	  		},function(){
+	  			timer=setInterval(function(){
+	  				$(".dropdown").removeClass("open")
+	  			},100);
+	  		})
+  		}else{
+  			//移动端
+  		}
+  		
+  		
+  	})
+  </script>
+  </body>
+</html>

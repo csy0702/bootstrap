@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--使用最高级的可用模式显示内容-->
+    	<!--移动端的视窗大小和我们的网页是同一个尺寸-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <style>
+  	div[class*="col-"]{
+  		background: gray;
+  		height: 50px;
+  		border: 1px solid red;
+  	}
+  	
+  </style>
+  <body>
+    <!--
+    	栅栏系统默认为12栏
+    -->
+	<div class="container">
+		<div class="row">
+				<!--列    屏幕大小   占了四栏   总共不能超过12    -->
+			<div class="col-lg-4">col-lg-4</div>
+			<div class="col-lg-4">col-lg-4</div>
+			<div class="col-lg-4">col-lg-4</div>
+		</div>
+		<div class="row">
+				<!--列    屏幕大小   占了四栏-->
+			<div class="col-md-4">col-lg-4</div>
+			<div class="col-md-4">col-lg-4</div>
+			<div class="col-md-4">col-lg-4</div>
+		</div>
+		<div class="row">
+				<!--列    屏幕大小   占了四栏-->
+			<div class="col-md-4 col-lg-1 col-xs-7">我是多个分辨率</div>
+			<div class="col-md-4 col-lg-8 col-xs-1">我是多个分辨率</div>
+			<div class="col-md-4 col-lg-3 col-xs-4">我是多个分辨率</div>
+		</div>
+	</div>
+    
+    <script src="bootstrap/jquery-3.1.0.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>

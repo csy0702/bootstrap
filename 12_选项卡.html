@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--使用最高级的可用模式显示内容-->
+    	<!--移动端的视窗大小和我们的网页是同一个尺寸-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <style>
+  
+  </style>
+  <body>
+	<div class="container">
+		<!--
+        	nav-tabs-justified:两端对齐
+        	active：激活
+        	data-toggle="tab"  这是一个选项卡
+        	fade in  淡入
+        -->
+		<ul id="mytable" class="nav nav-tabs nav-tabs-justified">
+			<li class="active"><a href="#a" data-toggle="tab">one</a></li>
+			<li ><a href="#b" data-toggle="tab">two</a></li>
+			<li ><a href="#c" data-toggle="tab">three</a></li>
+			<li ><a href="#d" data-toggle="tab">four</a></li>
+		</ul>
+		<ul class="tab-content">
+			<li id="a" class="tab-pane active fade in">aaaaaaaa</li>
+			<li id="b" class="tab-pane fade">bbbbbb</li>
+			<li id="c" class="tab-pane fade ">cccccc</li>
+			<li id="d" class="tab-pane  fade">dddddd</li>
+		</ul>
+		
+		<!--
+        	药丸形状
+        -->
+		<ul class="nav nav-pills nav-tabs-justified" style="width: 400px;">
+			<li class="active"><a href="#a" >one</a></li>
+			<li ><a href="#b" >two</a></li>
+			<li ><a href="#c" >three</a></li>
+			<li ><a href="#d" >four</a></li>
+		</ul>
+		
+		<!--
+        	竖装
+        -->
+		<ul class="nav nav-pills nav-stacked" style="width: 400px;">
+			<li class="active"><a href="#a" >one</a></li>
+			<li ><a href="#b" >two</a></li>
+			<li ><a href="#c" >three</a></li>
+			<li ><a href="#d" >four</a></li>
+		</ul>
+		
+		
+		<!--
+        	嵌套一层
+        -->
+		<ul class="nav nav-pills nav-justified" style="width: 400px;">
+			<li class="active"><a href="#a" >one</a></li>
+			<li ><a href="#b" >two</a></li>
+			<li ><a href="#c" >three</a></li>
+			<li class="dropdown"><a  class="dropdown-toggle" data-toggle="dropdown">four<span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="">class1</a></li>
+					<li><a href="">class2</a></li>
+				</ul>
+			</li>
+		</ul>
+		
+	</div>
+    
+    <script src="bootstrap/jquery-3.1.0.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script>
+    	//激活展示卡
+    	
+    	$("#mytable a").mouseover(function(){
+    		$(this).tab("show");
+    	})
+    </script>
+  </body>
+</html>
